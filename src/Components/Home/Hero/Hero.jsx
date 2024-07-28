@@ -23,7 +23,7 @@ function Hero() {
               <img
                 src={img1}
                 alt="Decor"
-                className="object-cover w-full h-full shadow-lg"
+                className="object-cover w-full h-full shadow-lg rounded-lg"
               />
             </div>
             <img

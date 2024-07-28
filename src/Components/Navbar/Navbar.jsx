@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import callIcon from "../../assets/call-icon.png";
-
+import { useNavigate } from "react-router-dom";
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -9,34 +9,57 @@ function Navbar() {
     setIsOpen(!isOpen);
   };
 
+  const navigate = useNavigate();
+
   return (
     <nav className="bg-black py-4 px-8">
       <div className="container mx-auto flex justify-between items-center lg:w-9/12">
-        <div className="text-2xl font-bold text-white">PD's SALON</div>
+        <div
+          onClick={() => navigate("/")}
+          className="text-2xl font-bold text-white cursor-pointer"
+        >
+          {" "}
+          PD's SALON
+        </div>
         <div className="hidden md:flex space-x-8 text-sm">
           <ul className="flex space-x-8 text-sm">
             <li>
-              <a href="#" className="text-yellow-300 hover:text-yellow-400">
+              <a
+                onClick={() => navigate("/")}
+                className="text-[#7b9e87] hover:text-white cursor-pointer"
+              >
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="text-yellow-300 hover:text-yellow-400">
+              <a
+                href="#"
+                className="text-[#7b9e87] hover:text-white cursor-pointer"
+              >
                 Services
               </a>
             </li>
             <li>
-              <a href="#" className="text-yellow-300 hover:text-yellow-400">
+              <a
+                onClick={() => navigate("/shop")}
+                className="text-[#7b9e87] hover:text-white cursor-pointer"
+              >
                 Shop
               </a>
             </li>
             <li>
-              <a href="#" className="text-yellow-300 hover:text-yellow-400">
+              <a
+                href="#"
+                className="text-[#7b9e87] hover:text-white cursor-pointer"
+              >
                 About
               </a>
             </li>
             <li>
-              <a href="#" className="text-yellow-300 hover:text-yellow-400">
+              <a
+                href="#"
+                className="text-[#7b9e87] hover:text-white cursor-pointer"
+              >
                 Contact
               </a>
             </li>
@@ -61,42 +84,27 @@ function Navbar() {
         <div className="md:hidden bg-black py-4 px-8">
           <ul className="space-y-4 text-sm">
             <li>
-              <a
-                href="#"
-                className="text-yellow-300 hover:text-yellow-400 block"
-              >
+              <a href="#" className="text-[#7b9e87] hover:text-white  block">
                 Home
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-yellow-300 hover:text-yellow-400 block"
-              >
+              <a href="#" className="text-[#7b9e87] hover:text-white block">
                 Services
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-yellow-300 hover:text-yellow-400 block"
-              >
+              <a href="#" className="text-[#7b9e87] hover:text-white block">
                 Shop
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-yellow-300 hover:text-yellow-400 block"
-              >
+              <a href="#" className="text-[#7b9e87] hover:text-white block">
                 About
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="text-yellow-300 hover:text-yellow-400 block"
-              >
+              <a href="#" className="text-[#7b9e87] hover:text-white block">
                 Contact
               </a>
             </li>

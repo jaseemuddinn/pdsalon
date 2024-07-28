@@ -1,21 +1,22 @@
-import './App.css'
-import Navbar from './Components/Navbar/Navbar'
-import Stat from './Components/Home/Stat/Stat'
-import Hero from './Components/Home/Hero/Hero'
-import About from './Components/Home/About/About'
-import Values from './Components/Home/Values/Values'
+import { Route, Router, Routes } from "react-router-dom";
+import "./App.css";
+import { lazy, Suspense } from "react";
+import Loader from "./Components/Loader/Loader";
+
+const Shop = lazy(()=> import('./Components/Shop/Shop'));
+const Home = lazy(()=> import('./Components/Home/Home'));
 
 function App() {
-
   return (
     <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Stat />
-      <Values />
+      <Suspense fallback={<Loader />}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+      </Routes>
+      </Suspense>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
