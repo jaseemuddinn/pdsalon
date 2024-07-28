@@ -1,4 +1,4 @@
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { lazy, Suspense } from "react";
 import Loader from "./Components/Loader/Loader";

@@ -72,7 +72,7 @@ const Shop = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {sortedProducts.map((product) => (
-            <div key={product.id} className="p-4 rounded">
+            <div key={product.id} className="p-4 hover:scale-105 duration-200 shadow hover:shadow-xl rounded-lg">
               <div className="relative">
                 <img
                   src={product.image}
